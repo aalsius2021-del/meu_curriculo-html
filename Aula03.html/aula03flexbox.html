@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+            {
+            padding: 50px 50px;
+        }
+
+        /* class: . nome da classe */
+        /* display nunca é column
+        justify-content e align-items não aceitam column
+        Para usar Flexbox, o display precisa ser flex */
+        .box1 {
+
+            /* o exemplo abaixo Centraliza os elementos vertical e horizontalmente Ideal para caixas, cards, divs principais */
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            width: 400px;
+            height: 400px; */
+
+            /* 
+            Opção 2  Coluna alinhada no topo, centralizada na largura
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: blue;
+            width: 400px;
+            height: 400px; 
+            */
+
+            /* 
+            Opção 3 — Espaço igual entre os itens (menu vertical) display: flex; (Tudo a esquerda)
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: blue;
+            width: 400px;
+            height: 400px 
+            */
+
+            /* 
+            Opção 4 — Alinhamento só em coluna (layout simples) display: flex; (diminui a caixa e mantem tudo a esquerda)
+            flex-direction: column;
+            background-color: blue;
+            width: 400px;
+            height: auto; 
+            */
+
+            /* 
+            Se a intenção for apenas empilhar elementos, (sem caixa opão de cor no fundo da box somente texto)
+            sem Flexbox background-color: blue;
+            width: 400px; 
+            */
+
+            /* 
+            Regra do Flexbox
+            display: flex (Para trabalhar com flex box)
+            flex-direction: row, column, row-reverse, column-reverse
+            justify-contentcenter: flex-start, flex-end, space-between 
+            align-itemscenter: flex-start, flex-end, stretch 
+            */
+
+
+            /* Centralizar conteúdo (horizontal e vertical) Ideal para login, banners, cards únicos         */
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center; */
+            /* eixo principal não ativar*/
+            /* align-items: center; */
+            /* eixo cruzado não ativar*/
+            /* width: 400px;
+            height: 400px;
+            background-color: blue;
+            color: white; */
+
+            /* Criar um menu (horizontal ou vertical) Menu vertical (sidebar) display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 200px;
+            height: 400px;
+            background-color: blue;
+            padding: 20px; */
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 200px;
+            height: 400px;
+            background-color: blue;
+            padding: 20px;
+        }
+
+        /* .menu-vertical a {
+            color: white;
+            text-decoration: none;
+
+
+        }
+
+        .menu-vertical a {
+            color: white;
+            text-decoration: none;
+
+
+        }
+
+        #titulo-principal {
+            color: #ffffff;
+
+        }
+
+        ul {
+            display: flex;
+            gap: 30px;
+
+        }
+
+        ul li {
+            list-style: none;
+            font-size: 1.5rem;
+
+        }
+
+        a {
+            color: #969696;
+            font-family: 'segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none;
+        } */
+
+
+
+        a:hover {
+            /* seletor para quanto o mouse estiver dentro do elemento */
+            color: red;
+            text-decoration: underline;
+            font-weight: 700;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <div class="box1">
+
+        <h1>FlexBox</h1>
+        <h2>FlexBox</h2>
+        <h3>FlexBox</h3>
+        <h4>FlexBox</h4> -->
+
+
+    <!-- <div class="box-center">
+        <p>Conteúdo centralizado</p>
+        <p>Conteúdo centralizado</p>
+        <p>Conteúdo centralizado</p>
+        <p>Conteúdo centralizado</p>
+    </div>
+
+
+    </div> -->
+
+    <!-- modelo 1 -->
+    <!-- <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+
+        </ul>
+    </nav> -->
+
+    <!-- modelo2 -->
+
+    <nav class="menu-vertical">
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+    </nav>
+
+
+
+</body>
+
+
+</html>
