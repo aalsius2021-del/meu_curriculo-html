@@ -1,0 +1,429 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+ 
+/* Declarando variáveis CSS */
+:root {
+    /* Cores da Landing Page */
+--cor-primaria: #004AC6;
+--cor-primaria-hover: #003EA8;
+--cor-fundo: #F8F9FF;
+--cor-branca: #FFFFFF;
+--cor-fundo-secundario: #EFF4FF;
+--cor-texto: #0B1C30;
+--cor-texto-suave: #434655;
+--cor-borda: #C3C6D7;
+ 
+/* Tipografia */
+--fonte-principal: 'Inter';
+ 
+/* Espaçamento */
+--espaco-xs: 0.5rem;
+--espaco-sm: 1rem;
+--espaco-md: 1.5rem;
+--espaco-lg: 2rem;
+--espaco-xl: 3rem;
+--espaco-xxl: 6rem;
+ 
+/* Bordas arredondadas */
+--raio-sm: 0.5rem;
+--raio-md: 0.75rem;
+--raio-lg: 1rem;
+}
+ 
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+ 
+h2{
+ 
+font-size: clamp(1.75rem, 3rem, 3rem);
+font-weight: 700;
+line-height: 1.2;
+color: var(--cor-texto);
+margin-bottom: var(--espaco-lg);
+ 
+ 
+}
+ 
+.navbar {
+    position: fixed; /* Mantém a navbar fixa no topo da página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999; /* Garante que a navbar fique acima de outros elementos */
+    background-color: var(--cor-fundo);
+    opacity: 0.85; /* Adiciona um pouco de transparência para destacar o conteúdo */
+    backdrop-filter: blur(12px); /* Adiciona um efeito de desfoque para melhorar a legibilidade */
+    border-bottom: 1px solid var(--cor-borda);
+}
+ 
+.navbar-inner {
+    display: flex; /* Deixa em linha os itens da navbar */
+    justify-content: space-around; /* Distribui os itens com espaço ao redor */
+    align-items: center; /* Alinha os itens verticalmente */
+    max-width: 1280px; /* Limita a largura máxima da navbar */
+    margin: 0 auto; /* Centraliza a navbar horizontalmente */
+    padding: var(--espaco-sm) var(--espaco-lg); /* Espaçamento interno da navbar */
+}
+ 
+.navbar-logo {
+    font-size: 1.25rem; /* Tamanho da logo */
+    font-weight: 800; /* Negrito para destacar a logo */
+    color: var(--cor-primaria); /* Cor da logo */
+    text-decoration: none; /* Remove sublinhado */
+    letter-spacing: -0.03rem; /* Ajusta o espaçamento entre letras para um visual mais compacto */
+}
+ 
+.navbar-links {
+    display: flex; /* Deixa os links em linha */
+    list-style: none; /* Remove marcadores de lista */
+    gap: var(--espaco-lg);  /* Espaçamento entre os links */
+}
+ 
+.navbar-links a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: var(--cor-texto-suave);
+    font-size: 0.9375rem;
+    font-weight: 550; /* Peso médio para os links */
+ 
+}
+ 
+/* Comportamento quando o mouse passa sobre os links da navbar */
+.navbar-links a:hover {
+    color: var(--cor-primaria);
+   
+}
+ 
+.navbar-botoes {
+    display: flex; /* Deixa os botões em linha */
+    align-items: center; /* Alinha os botões verticalmente */
+    gap: var(--espaco-sm); /* Espaçamento entre os botões */
+   
+}
+ 
+.navbar-button {
+    background-color: var(--cor-primaria); /* Cor de fundo do botão */
+    color: var(--cor-branca); /* Cor do texto do botão */
+    border: none; /* Remove borda padrão */
+    font-size: 0.9375rem; /* Tamanho da fonte do botão */
+    font-weight: 700; /* Negrito para destacar o botão */
+    padding: 0.8rem 1.25rem; /* Espaçamento interno do botão */
+    border-radius: var(--raio-md); /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
+    transition: all 0.15s ease; /* Transição suave para as alterações de estilo */
+}
+ 
+/* Dentro do hover so adicionamos o que sera alterado */
+.navbar-button:hover {
+    background-color: var(--cor-primaria-hover); /* Cor de fundo do botão ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho para dar um efeito de destaque */
+}
+ 
+.navbar-login-link {
+    text-decoration: none; /* Remove sublinhado do link de login */
+    color: var(--cor-texto-suave); /* Cor do link de login */
+    font-weight: 550; /* Peso médio para o link de login */
+    font-size: 0.9375rem; /* Tamanho da fonte do link de login */
+}
+ 
+.navbar-login-link:hover {
+    color: var(--cor-primaria-hover); /* Cor do link de login ao passar o mouse */
+}
+ 
+.hero {
+    min-height: 100vh; /* vh- viewport height - altura da tela */
+    display: flex; /* Deixa os itens em linha */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Alinha os itens horizontalmente */
+    justify-content: center; /* Alinha os itens verticalmente */
+    padding: var(--espaco-lg) var(--espaco-xxl);/* Espaçamento interno da seção hero */
+}
+ 
+.hero-label {
+    display: inline-block; /* Permite que o label tenha um tamanho definido */
+    background-color: color-mix(in srgb, var(--cor-primaria) 15%, transparent);
+    text-transform: uppercase;
+    color: var(--cor-primaria);
+    font-size: 0.75rem; /* Tamanho da fonte do label */
+    font-weight: 700;
+    letter-spacing: 0.12rem; /* Aumenta o espaçamento entre letras para um visual mais moderno */
+    padding: 0.375rem 1rem; /* Espaçamento interno do label */
+    border-radius: var(--raio-lg); /* Bordas arredondadas para o label */
+    margin-bottom: var(--espaco-lg); /* Espaçamento abaixo do label */
+}
+ 
+.hero-titulo {
+    font-size: clamp(2.5rem, 5.7rem, 4.5rem); /* clamp(minimo, ideal, maximo) - Nunca menor que o mínimo, nunca maior que o máximo, ideal para responsividade */
+    font-weight: 800; /* Negrito para destacar o título */
+    line-height: 1.1; /* Altura da linha para melhorar a legibilidade do título */
+    letter-spacing: -0.03rem; /* Ajusta o espaçamento entre letras para um visual mais compacto */
+    color: var(--cor-texto); /* Cor do título */
+    max-width: 56rem; /* Limita a largura máxima do título para melhorar a legibilidade */
+    text-align: center; /* Centraliza o texto do título */
+    margin-bottom: var(--espaco-md); /* Espaçamento abaixo do título */
+}
+ 
+.hero-titulo span {
+    color: var(--cor-primaria);
+}
+ 
+.hero-subtitulo {
+    font-size: clamp(1rem, 1.875rem, 1.25rem);
+    color: var(--cor-texto-suave); /* Cor do subtítulo */
+    max-width: 42rem;
+    line-height: 1.7;
+    margin-bottom: var(--espaco-xl);
+    text-align: center;
+}
+ 
+.hero-botoes {
+    display: flex; /* Deixa os botões em linha */
+    gap: var(--espaco-sm); /* Espaçamento entre os botões */
+}
+ 
+ 
+.btn-funcionalidades {
+    background-color: var(--cor-primaria); /* Cor de fundo do botão */
+    color: var(--cor-branca); /* Cor do texto do botão */
+    border: none; /* Remove borda padrão */
+    font-size: 1.07rem; /* Tamanho da fonte do botão */
+    font-weight: 700; /* Negrito para destacar o botão */
+    padding: 1rem 2rem; /* Espaçamento interno do botão */
+    border-radius: var(--raio-md); /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
+    transition: all 0.15s ease; /* Transição suave para as alterações de estilo */
+}
+ 
+.btn-funcionalidades:hover {
+ background-color: var(--cor-primaria-hover); /* Cor de fundo do botão ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho para dar um efeito de destaque */
+ 
+}
+ 
+.btn-saiba-mais {
+    background-color: var(--cor-branca); /* Cor de fundo do botão */
+    outline: 2px solid var(--cor-primaria);
+    color: var(--cor-primaria); /* Cor do texto do botão */
+    border: none; /* Remove borda padrão */
+    font-size: 0.9375rem; /* Tamanho da fonte do botão */
+    font-weight: 700; /* Negrito para destacar o botão */
+    padding: 0.8rem 1.25rem; /* Espaçamento interno do botão */
+    border-radius: var(--raio-md); /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
+    transition: all 0.15s ease; /* Transição suave para as alterações de estilo */
+}
+ 
+.btn-saiba-mais:hover {
+    transform: scale(1.05);
+}
+ 
+.hero-estatisticas{
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap: var(--espaco-lg);
+width:100%;
+max-width: 48rem;
+padding-top: var(--espaco-xl);
+border-top: 1px solid var(--cor-borda);
+ 
+ }
+ 
+ 
+ 
+.hero-estatisticas-item{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: var(--espaco-xs);
+ 
+ }
+ 
+ 
+ 
+.dados-numeros{
+font-size: 2.25rem;
+color: var(--cor-primaria);
+font-weight: 700;
+line-height: 1;
+ 
+ }
+ 
+ 
+ 
+.dados-descricao{
+font-size: 0.9375rem;
+color: var(--cor-texto-suave);
+font-weight: 500;
+ 
+ }
+ 
+ 
+ 
+.sobre{
+padding: var(--espaco-xxl) 0;
+ 
+ }
+ 
+ 
+ 
+.sobre .container{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 4rem;
+align-items: center;
+max-width: 1280px;
+margin: 0 auto;
+ 
+ }
+ 
+ 
+ 
+.sobre-texto span{
+text-transform: uppercase;
+color: var(--cor-primaria);
+font-weight: 700;
+letter-spacing: 2px;
+margin-bottom: var(--espaco-sm);
+ 
+ }
+ 
+ 
+ 
+ 
+.sobre-paragrafo{
+font-size: 1.0625rem;
+color: var(--cor-texto-suave);
+line-height: 1.75;
+margin-bottom: var(--espaco-md);
+ 
+}
+ 
+.sobre-pilares{
+background-color: var(--cor-branca);
+border: 1px solid var(--cor-borda);
+border-radius: var(--raio-lg);
+padding: var(--espaco-xl);
+ 
+ }
+ 
+ 
+ 
+.sobre-pilares-titulo{
+font-size: 1.375rem;
+font-weight: 700;
+color: var(--cor-texto);
+margin-bottom: var(--espaco-lg);
+ 
+}
+ 
+ 
+ 
+.pilares-lista{
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: var(--espaco-md);
+ 
+  }
+ 
+ 
+.pilar{
+display: flex;
+align-items: start;
+gap: var(--espaco-sm);
+ }
+ 
+ 
+ 
+.pilar-icone{
+background-color: color-mix(in srgb, var(--cor-primaria) 10%, transparent) ;
+padding: var(--espaco-xs);
+border-radius: var(--raio-sm);
+ 
+ }
+ 
+ 
+ 
+.pilar-titulo{
+display: block;
+font-weight: 600;
+color: var(--cor-texto);
+margin-bottom: 2px;
+ }
+ 
+ 
+.pilar-descricao{
+font-size: 0.875rem;
+color: var(--cor-texto-suave);
+line-height: 1.5;
+}
+ 
+/* Soluções */
+ 
+.solucoes {
+    background-color: var(--cor-fundo-secundario);
+    padding: var(--espaco-xxl) 0;
+}
+ 
+.solucoes .container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+ 
+.solucoes-header {
+    text-align: center;
+    margin-bottom: var(--espaco-xl);
+}
+ 
+.solucoes-descricao {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--cor-texto-suave);
+    line-height: 1.75;
+    max-width: 38rem;
+}
+ 
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Garante que as colunas se ajustem automaticamente, com um mínimo de 250px e ocupando o espaço disponível */
+    gap: var(--espaco-lg);
+}
+
+.card {
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-lg);
+    padding: var(--espaco-xl);
+}
+
+.card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    /* transition: all 0.3s ease;   **ver como fica */ 
+}
+
+.card-icone {
+font-size: 2rem;
+font-weight: 700;
+margin-bottom: var(--espaco-md);
+}
+
+.card-titulo {
+font-size: 1.25rem;
+font-weight: 700;
+color: var(--cor-texto);
+margin-bottom: var(--espaco-xs);
+}
+
+.card-descricao {
+font-size: 0.9375rem;
+color: var(--cor-texto-suave);
+line-height: 1.7;
+}   

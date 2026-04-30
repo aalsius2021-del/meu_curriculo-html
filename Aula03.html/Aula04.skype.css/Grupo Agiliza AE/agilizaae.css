@@ -1,0 +1,219 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS DE CORES */
+:root {
+  --vermelho: #DC143C;
+  --laranja: #FF6B35;
+  --amarelo: #FFA500;
+  --cinza: #ffffff;
+  --texto: #374151;
+}
+
+/* FONTE GLOBAL */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--cinza);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+header .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--vermelho), var(--laranja), var(--amarelo));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #ffff;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, var(--vermelho), var(--laranja), var(--amarelo));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ================= NAV ================= */
+nav a {
+  text-decoration: none;
+  margin: 0 0.25rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  color: var(--texto);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  background: linear-gradient(90deg, var(--vermelho), var(--laranja));
+  color: #fff;
+}
+
+.btn-login {
+  background: linear-gradient(90deg, var(--vermelho), var(--laranja));
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-login:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ================= HERO ================= */
+.hero {
+  padding: 5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--vermelho), var(--laranja), var(--amarelo));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.hero button {
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--vermelho), var(--laranja));
+  color: #fff;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ================= GRID ================= */
+.grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* ================= CARDS ================= */
+.card {
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* ================= CTA ================= */
+.cta {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(90deg, var(--vermelho), var(--laranja), var(--amarelo));
+  color: #fff;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.cta button {
+  padding: 1rem 3rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 1.05rem;
+  background: #ffffff;
+  color: var(--vermelho);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #111827;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .cta h2 {
+    font-size: 2.2rem;
+  }
+}

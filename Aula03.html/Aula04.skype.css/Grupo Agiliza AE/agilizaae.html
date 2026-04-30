@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agiliza AE! </title>
+
+
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Header</title>
+
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Lucide Icons CDN -->
+        <script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-[#DC143C] via-[#FF6B35] to-[#FFA500] rounded-full flex items-center justify-center shadow-lg">
+                        <span class="text-white text-2xl">🍿</span>
+                    </div>
+                    <h1
+                        class="text-3xl bg-gradient-to-r from-[#DC143C] via-[#FF6B35] to-[#FFA500] bg-clip-text text-transparent tracking-tight">
+                        AGILIZA AE!
+                    </h1>
+                </div>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex gap-2">
+                    <button
+                        class="px-5 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#DC143C] hover:to-[#FF6B35] hover:text-white transition-all duration-300 text-gray-700">SOBRE</button>
+                    <button
+                        class="px-5 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#DC143C] hover:to-[#FF6B35] hover:text-white transition-all duration-300 text-gray-700">QUEM
+                        SOMOS</button>
+                    <button
+                        class="px-5 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#DC143C] hover:to-[#FF6B35] hover:text-white transition-all duration-300 text-gray-700">PARCEIROS</button>
+                    <button
+                        class="px-5 py-2 rounded-full hover:bg-gradient-to-r hover:from-[#DC143C] hover:to-[#FF6B35] hover:text-white transition-all duration-300 text-gray-700">CONTATO</button>
+
+                    <button
+                        class="px-6 py-2 bg-gradient-to-r from-[#DC143C] to-[#FF6B35] text-white rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
+                        LOGIN
+                    </button>
+                </nav>
+
+                <!-- Botão Mobile -->
+                <button id="menuBtn" class="md:hidden">
+                    <i id="menuIcon" data-lucide="menu"></i>
+                </button>
+
+            </div>
+
+            <!-- Menu Mobile -->
+            <div id="mobileMenu" class="hidden mt-4 flex flex-col gap-2 md:hidden">
+                <button class="px-4 py-2 rounded-lg bg-gray-100">SOBRE</button>
+                <button class="px-4 py-2 rounded-lg bg-gray-100">QUEM SOMOS</button>
+                <button class="px-4 py-2 rounded-lg bg-gray-100">PARCEIROS</button>
+                <button class="px-4 py-2 rounded-lg bg-gray-100">CONTATO</button>
+                <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-[#DC143C] to-[#FF6B35] text-white">
+                    LOGIN
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+
+        let isOpen = false;
+
+        menuBtn.addEventListener("click", () => {
+            isOpen = !isOpen;
+            mobileMenu.classList.toggle("hidden");
+            menuIcon.setAttribute("data-lucide", isOpen ? "x" : "menu");
+            lucide.createIcons();
+        });
+    </script>
+
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="min-h-screen flex flex-col bg-gray-50">
+
+        <!-- Header  comentei o titulo antigo para colocar o novo header com o logo e o menu de navegação
+        <header class="bg-white shadow p-6 text-center text-xl font-bold">
+            Agiliza AE!
+        </header>  -->
+
+        <main class="flex-1">
+
+            <!-- Hero Section -->
+            <section class="relative py-20 px-6 overflow-hidden">
+
+                <!-- Decorative Background -->
+                <div class="absolute inset-0 opacity-10">
+                    <div
+                        class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#DC143C] to-[#FF6B35] rounded-full blur-3xl">
+                    </div>
+                    <div
+                        class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-[#FFA500] to-[#FFD700] rounded-full blur-3xl">
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto relative z-10 text-center mb-16">
+
+                    <span
+                        class="inline-block mb-4 px-6 py-2 bg-gradient-to-r from-[#DC143C] to-[#FF6B35] text-white rounded-full text-sm shadow-lg">
+                        🎉 Oportunidade de Negócio
+                    </span>
+
+                    <h1
+                        class="text-6xl md:text-7xl mb-6 bg-gradient-to-r from-[#DC143C] via-[#FF6B35] to-[#FFA500] bg-clip-text text-transparent">
+                        Seja nosso parceiro
+                    </h1>
+
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                        Transforme seu espaço em uma fonte de renda extra com nossas vending machines inteligentes
+                    </p>
+
+                    <button
+                        class="px-8 py-4 bg-gradient-to-r from-[#DC143C] to-[#FF6B35] text-white rounded-full text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                        Quero ser parceiro →
+                    </button>
+                </div>
+
+                <!-- Snacks Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
+
+                    <div class="p-6 bg-white rounded-xl shadow text-center">
+                        <img src="https://via.placeholder.com/150" class="mx-auto mb-4" alt="Snack">
+                        <h3 class="font-semibold">Snack 1</h3>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-xl shadow text-center">
+                        <img src="https://via.placeholder.com/150" class="mx-auto mb-4" alt="Snack">
+                        <h3 class="font-semibold">Snack 2</h3>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-xl shadow text-center">
+                        <img src="https://via.placeholder.com/150" class="mx-auto mb-4" alt="Snack">
+                        <h3 class="font-semibold">Snack 3</h3>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-xl shadow text-center">
+                        <img src="https://via.placeholder.com/150" class="mx-auto mb-4" alt="Snack">
+                        <h3 class="font-semibold">Snack 4</h3>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Benefits Section -->
+            <section class="py-20 px-6 bg-white">
+                <div class="max-w-7xl mx-auto text-center mb-16">
+                    <h2
+                        class="text-5xl mb-4 bg-gradient-to-r from-[#DC143C] to-[#FFA500] bg-clip-text text-transparent">
+                        Por que escolher a Agiliza AE!?
+                    </h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                        Oferecemos a solução completa para você lucrar sem complicações
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+                    <div class="p-8 rounded-2xl bg-gray-50 border shadow hover:shadow-xl transition">
+                        <h3 class="text-xl mb-3 font-semibold">Lucro Garantido</h3>
+                        <p class="text-gray-600">Modelo de negócio simples e rentável.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-gray-50 border shadow hover:shadow-xl transition">
+                        <h3 class="text-xl mb-3 font-semibold">Gestão Inteligente</h3>
+                        <p class="text-gray-600">Monitoramento online das vendas.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-gray-50 border shadow hover:shadow-xl transition">
+                        <h3 class="text-xl mb-3 font-semibold">Suporte Completo</h3>
+                        <p class="text-gray-600">Cuidamos de tudo para você.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section
+                class="py-20 px-6 bg-gradient-to-r from-[#DC143C] via-[#FF6B35] to-[#FFA500] text-center text-white">
+                <h2 class="text-5xl mb-6">Pronto para começar?</h2>
+                <p class="text-xl mb-8 text-white/90">
+                    Entre em contato agora e descubra como é fácil ter uma renda extra com a Agiliza AE!
+                </p>
+                <button
+                    class="px-10 py-4 bg-white text-[#DC143C] rounded-full text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                    Falar com especialista
+                </button>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white text-center p-6">
+            © 2026 Agiliza AE! - Todos os direitos reservados
+        </footer>
+
+    </body>
+
+</html>
