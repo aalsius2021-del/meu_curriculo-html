@@ -427,3 +427,54 @@ font-size: 0.9375rem;
 color: var(--cor-texto-suave);
 line-height: 1.7;
 }   
+
+/* começando css de equipe */
+
+.equipe {
+    padding: var(--espaco-xxl) 0;
+}
+
+.container-equipe {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.dados-equipe {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+    justify-content: center;
+    gap: var(--espaco-lx);
+    margin-top: var(--espaco-xl);
+}
+.membro-equipe {
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar {
+    width: 112px;
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75rem;
+    border-radius: 50%;
+    margin-bottom: var(--espaco-md);
+}
+
+.membro-cargo {
+    font-size: 0.875rem;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    margin-bottom: var(--espaco-sm);
+}
+
+.membro-descrição{
+  font-size: 0.9375rem;
+  color: var(--cor-texto-suave);
+}
