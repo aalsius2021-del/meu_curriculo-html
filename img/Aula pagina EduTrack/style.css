@@ -484,3 +484,210 @@ line-height: 1.7;
   font-size: 0.9375rem;
   color: var(--cor-texto-suave);
 }
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Seção "Vamos conversar" */
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 40px 0 10px;
+    color: #1e3a8a;
+}
+
+.Agende-uma-demonstração {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-size: 1.1rem;
+}
+
+/* Informações de contato */
+.contato,
+.dados-contato,
+.suporte {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.dados-contato {
+    background-color: #e0e7ff;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Área do formulário */
+textarea {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #0f172a;
+    color: #fff;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+/* Logo no footer */
+.navbar-logo {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #38bdf8;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+/* Links do footer */
+.footer-inferior {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.navbar-links a {
+    color: #cbd5f5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #38bdf8;
+}
+
+
+/* Novo código css dia 06/05/2026 */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Seção "Vamos conversar" */
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 40px 0 10px;
+    color: #1e3a8a;
+}
+
+.Agende-uma-demonstração {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-size: 1.1rem;
+}
+
+/* Informações de contato */
+.contato,
+.dados-contato,
+.suporte {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.dados-contato {
+    background-color: #e0e7ff;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Área do formulário */
+textarea {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #0f172a;
+    color: #fff;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+/* Logo no footer */
+.navbar-logo {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #38bdf8;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+/* Links do footer */
+.footer-inferior {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.navbar-links a {
+    color: #cbd5f5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #38bdf8;
+}
